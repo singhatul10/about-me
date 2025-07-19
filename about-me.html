@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+             background-color: #0e0e0e;
+             color: #dac5a7;
+             overflow-x: hidden;
+            
+        }
+        header{
+
+            margin: 3rem auto;
+            width: 90%;
+            background-color: #1a1a1a; 
+            border-radius: 6px;
+            color: #dac5a7;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+
+        header .right-nav{
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .right-nav a{
+            text-decoration: none;
+            color: #dac5a7;
+            font-weight: 400;
+            font-size: 1.2rem;
+            font-family: sans-serif;
+
+        }
+        header #logo{
+            font-size: 20px;
+            font-weight: bold;
+            
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header #btn{
+            background: linear-gradient(to right, #3e3e3e, #1a1a1a);
+            border: 1px solid #dac5a7;
+            font-weight: 800;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .main {
+            margin: 4rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;    
+            text-align: center;
+        }
+        .main h1{
+            font-size: 8rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        .main p{
+             text-align: center;
+             font-weight: 100;
+             line-height: 1.5; 
+             font-size: 1.2rem;
+             font-family: sans-serif;         
+        } 
+        .hobbies-section{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0 4rem;   
+        }
+        .hobby{
+            width: fit-content;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .hobby img{
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+        .hobby h4{
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        .hobby p{
+            text-align: center;
+            font-size: 1rem;
+            opacity: 0.5;
+        }
+        .heading{
+            margin: 0 auto 3rem auto;
+            border: 1px solid #dac5a7;
+            padding: .1rem 2rem;
+            width:fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+        .heading h1{
+            font-weight: 400;
+        }
+        .heading i{
+             margin-left: 10px;
+        }
+
+        #table-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background-color: #0e0e0e;
+            color: #dac5a7;
+        }
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  background-color: #1a1a1a;
+  color: #dac5a7;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  border: 1px solid #dac5a7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  color: #dac5a7;
+  text-transform: uppercase;
+}
+thead {
+  background-color: #2c2c2c;
+}
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+tbody tr:hover {
+  background-color: #333;
+  transition: 0.3s ease;
+}
+
+#gallery-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-section{
+    width: full;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+#form{
+    background-color: #2c2c2c;
+    padding: 2rem;
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+}
+
+
+#form h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 1.3rem;
+}
+
+#input{
+    display: flex;
+    flex-direction: column;
+    margin: 2opx;
+    gap: 7px;
+    margin-bottom: 1rem;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+input{
+    padding: 10px;
+    border-radius: 8px;
+    outline: #dac5a7;
+
+}
+
+textarea{
+    border-radius: 8px;
+    outline: #dac5a7;
+    padding: 10px;
+    height: 120px;
+}
+
+#button{
+    margin: 20px;
+}
+
+#button button{
+    width: 100%;
+    background-color: #dac5a7;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    padding: .4rem 2rem;
+    color: #2c2c2c;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left-nav">
+            <span id="logo">Atul Kumar Singh</span>
+        </div>
+        <div class="right-nav">
+            <a href="#hobbies-section">Hobbies</a>
+            <a href="#table-section">Table</a>
+            <a href="#form-section">Contact</a>
+            <a href="#gallery-section">Video</a>
+            <span id="btn">FullStack Developer</span>
+        </div>     
+    </header>
+    <section class="main">
+        <h1>Web Designer <br>& Developer</h1>
+        <p>Hello! I'm Atul, a passionate <br>full stack developer who loves building <br> web applications and exploring new technologies.</p>
+    </section>
+    <span class="heading">
+        <h1>Hobbies</h1>
+        <i class="fa-solid fa-arrow-right"></i>
+    </span>
+    <article class="hobbies-section " id="hobbies-section">
+        
+        <div class="hobby">
+            <img src="https://images.unsplash.com/photo-1533679045275-61323437b7c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvb3RiYWxsJTIwZGFyayUyMGltYWdlfGVufDB8fDB8fHww" alt="">
+            <h4>Playing Football</h4>
+            <p>Football is my favorite hobby. <br> It keeps me active, improves my teamwork skills,<br> and I enjoy the excitement of both playing <br> and watching the game.</p>
+        </div>
+         <div class="hobby">
+            <img src="https://images.unsplash.com/photo-1581409549146-c842ec039a8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dHJhdmVsaW5nJTIwZGFyayUyMGltYWdlfGVufDB8fDB8fHww" alt="">
+            <h4>Travelling</h4>
+            <p>Football is my favorite hobby. <br> It keeps me active, improves my teamwork skills,<br> and I enjoy the excitement of both playing <br> and watching the game.</p>
+        </div>
+         <div class="hobby">
+            <img src="https://images.unsplash.com/photo-1596453543800-78e53e0f7c58?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fGNvZGluZyUyMGRhcmslMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+            <h4>Codingg</h4>
+            <p>Football is my favorite hobby. <br> It keeps me active, improves my teamwork skills,<br> and I enjoy the excitement of both playing <br> and watching the game.</p>
+        </div>
+       
+
+    </article>
+    <section id="table-section">
+        <table>
+            <caption>weekly learning schedule</caption>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Topic 1</th>
+                    <th>Topic 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>WebDevelopment</td>
+                    <td>Data Structure</td>
+                </tr>
+                <tr>
+                    <td>TuesDay</td>
+                    <td>Operating System</td>
+                    <td>WebDevelopment</td>
+                </tr>
+                <tr>
+                    <td>WednesDay</td>
+                    <td>WebDevelopment</td>
+                    <td>Networking</td>
+                </tr>
+                <tr>
+                    <td>Thrusday</td>
+                    <td>Data Structure</td>
+                    <td>WebDevelopment</td>
+                </tr>
+                <tr>
+                    <td>FriDay</td>
+                    <td>WebDevelopment</td>
+                    <td>Data Structure</td>
+                </tr>
+                <tr>
+                    <td>SaturDay</td>
+                    <td>Operating System</td>
+                    <td>WebDevelopment</td>
+                </tr>
+                <tr>
+                    <td>SunDay</td>
+                    <td>WebDevelopment</td>
+                    <td>Networking</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="gallery-section">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/cjN2cRoP7qg" title="Where Faith Meets the Mountains - “Madhyamaheshwar Trek”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section id="form-section">
+    <div id="form">
+        <h2>Contact Us</h2>
+        <form action="">
+            <div id="input">
+                <label for="name">Enter your name</label>
+                <input type="text" name="" id="name" placeholder="Enter Name...">
+            </div>
+            <div id="input">
+                <label for="email">Enter your Email</label>
+                <input type="email" name="" id="email" placeholder="Enter Email...">
+            </div>
+            <div id="input">
+                <label for="Message">Enter Message</label>
+                <textarea name="" id="Message" placeholder="Write your Message..."></textarea>
+            </div>
+            <div id="button">
+                <button>Submit Message</button>
+            </div>
+        </form>
+    </div>
+
+    </section>
+    
+</body>
+</html>
